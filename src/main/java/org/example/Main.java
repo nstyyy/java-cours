@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.Enums.Ville;
+import org.example.foot.EnglishClub;
+import org.example.foot.FrenchClub;
 import org.example.student.InfosEtudiant;
 
 import static java.lang.System.*;
@@ -32,7 +33,7 @@ public class Main {
         infosEtudiant();
 
         // Debut POO
-        // TODO -> Utiliser l'objet Livre
+        initClub();
     }
 
     private static void sayHelloInChars() {
@@ -59,5 +60,14 @@ public class Main {
     private static void infosEtudiant() {
         final InfosEtudiant infosEtudiant = new InfosEtudiant();
         infosEtudiant.afficherInfo();
+    }
+
+    private static void initClub() {
+        FrenchClub PSG = new FrenchClub("PSG", 2);
+        PSG.setClassement(1);
+        out.println(PSG.getClassementMsg());
+
+        EnglishClub Liverpool = new EnglishClub("Liverpool", 3);
+        out.println(Liverpool.getClassement());
     }
 }

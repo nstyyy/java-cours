@@ -34,6 +34,8 @@ Un switch peut etre seulement fait sur :
 - des valeurs littérales
 - des constantes final connues à la compilation
 - des enum
+<br><br>
+Le mot clé permet de casser le switch, pour éviter d'entrer dans d'autres cas du switch.
 
 ```
 final int day = 2;
@@ -61,6 +63,7 @@ switch (day) {
 ```
 
 ### Version plus propre et moderne :
+Avec cette version, plus besoin d'utiliser le mot clé "**break**".
 ```
 int day = 1;
 switch (day) {

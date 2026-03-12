@@ -1,16 +1,14 @@
 package org.example.foot;
 
-import java.util.Objects;
-
 public class FrenchClub {
 
-    String name;
+    private String name;
 
-    int classement;
+    private int classement;
 
-    boolean playLDC;
+    private boolean playLDC;
 
-    final String country = "France";
+    private final String country = "France";
 
     public FrenchClub(final String name, final int classement, final boolean playLDC) {
         this.name = name;
@@ -23,9 +21,13 @@ public class FrenchClub {
         this(name, classement, true);
     }
 
-
     public int getClassement() {
         return classement;
+    }
+
+    public String getClassementMsg() {
+        String message = "Le club %s est situé dans le classement à la place : %s";
+        return String.format(message, this.name, this.classement);
     }
 
     public void setClassement(final int classement) {
