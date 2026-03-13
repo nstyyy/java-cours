@@ -1,5 +1,8 @@
 package org.example.foot;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FrenchClub {
 
     private String name;
