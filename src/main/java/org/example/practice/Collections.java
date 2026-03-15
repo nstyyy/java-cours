@@ -1,7 +1,9 @@
 package org.example.practice;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static java.lang.System.out;
 
@@ -28,7 +30,7 @@ public class Collections {
 
     private void arrayList() {
 
-        List<String> joueurs = new ArrayList<String>();
+        List<String> joueurs = new ArrayList<>();
 
         joueurs.add("Neymar");
         joueurs.add("Messi");
@@ -41,6 +43,62 @@ public class Collections {
         }
 
         joueurs.set(0, "Mbappé");
+        joueurs.add("Ramos");
+
+        // Filtrage de joueur commençant par la lettre "R"
+        joueurs.stream()
+               .filter(j -> j.startsWith("R")) // Prends chaque joueur j, et vérifie si j.startsWith("R") est vrai. (c'est une lambda)
+               .forEach(out::println);
+
+        // Transformer les données avec map
+        joueurs.stream()
+               .map(String::toUpperCase)
+               .forEach(out::println);
+
+
+        // Vérifier si un joueur existe
+        boolean messiExist = joueurs.stream()
+                .anyMatch(j -> j.equalsIgnoreCase("messi")); // Prends chaque joueur j, et vérifie si j.equalsIgnoreCase("messi); est vrai. (c'est une lambda)
+
+        // Trie les élements par ordre naturel (ici alphabétique)
+        joueurs.stream()
+               .sorted()
+               .forEach(out::println);
+    }
+
+    private void hashSet() {
+        Set<String> joueurs = new HashSet<>();
+
+        joueurs.add("Neymar");
+        joueurs.add("Messi");
+        joueurs.add("Mbappé");
+
+        joueurs.remove("Messi");
+        joueurs.add("Ramos");
+
+        // Filtrage de joueur commençant par la lettre "R"
+        joueurs.stream()
+               .filter(j -> j.startsWith("R")) // Prends chaque joueur j, et vérifie si j.startsWith("R") est vrai. (c'est une lambda)
+               .forEach(out::println);
+
+        // Transformer les données avec map
+        joueurs.stream()
+               .map(String::toLowerCase)
+               .forEach(out::println);
+
+        // Vérifier si un joueur existe
+        boolean messiExist = joueurs.stream()
+                                    .anyMatch(j -> j.equalsIgnoreCase("messi"));
+
+        // Trie les élements par ordre naturel (ici alphabétique)
+        joueurs.stream()
+               .sorted()
+               .forEach(out::println);
+
+    }
+
+    private void hashMap() {
+
     }
 
 

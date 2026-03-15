@@ -4,6 +4,9 @@ import org.example.foot.EnglishClub;
 import org.example.foot.FrenchClub;
 import org.example.student.InfosEtudiant;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static java.lang.System.*;
 
 
@@ -18,6 +21,15 @@ public class Main {
         getDay();
 
         sayHelloInChars();
+
+        Set<String> joueurs = new HashSet<>();
+
+        joueurs.add("Neymar");
+        joueurs.add("Messi");
+        joueurs.add("Mbappé");
+
+        joueurs.remove("Messi");
+        joueurs.add("Mbappé");
 
 
         int[] test = {1,2,3};

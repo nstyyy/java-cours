@@ -8,7 +8,7 @@ La déclaration d'un tableau est comme une variable classique, on y ajoute seule
 ```
 int[] players;
 ```
-Il est également possible d'instancier un tableau avec nombres d'emplacements fixés.
+Il est également possible d'instancier un tableau avec nombres d'emplacements fixés. Les valeurs sont par défaut égal à 0 pour les éléments avant que ce soit défini.
 ```
 int[] players = new int[5]; // emplacement de 5
 ```
