@@ -8,7 +8,7 @@ Toutes les clés d'un dictionnaire doivent être **uniques**. Le type de clé ut
 # 1. Déclaration de map
 Voici comment déclarer une **Map** en Java, ici nous utiliserons le **HashMap** :
 ```
-Map<String,Integer> myMap = new HashMap<>():
+Map<String,Integer> myMap = new HashMap<>();
 ```
 Explication des mots clés :
 - ```Map``` : C'est le type de l'interface. Map est donc une interface.
@@ -24,7 +24,7 @@ Il est également possible de modifier un élement en réutilisant une clé exis
 
 # 2. Utilisation de HashMap
 ```
-Map<String,Integer> psgPlayers = new HashMap<>():
+Map<String,Integer> psgPlayers = new HashMap<>();
 
 psgPlayers.put("Dembele", 15);
 
